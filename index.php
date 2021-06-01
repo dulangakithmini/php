@@ -18,9 +18,9 @@
 <h1>Hello <?php echo $name;  ?> K </h1>
 
 
-<?php if (isset($name)) { ?>
+<?php if (isset($name)) : ?>
 <h1><?php echo $name; ?></h1>
-<?php } ?>
+<?php endif; ?>
 
 </body>
 </html>
