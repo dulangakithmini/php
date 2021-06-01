@@ -45,5 +45,7 @@ class Post
 
         //Exwcute query
         $stmt->execute();
+
+        return $stmt;
     }
 }
