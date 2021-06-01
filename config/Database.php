@@ -21,5 +21,7 @@ class Database
         } catch (PDOException $exception) {
             echo "Connection Error: " . $exception->getMessage();
         }
+
+        return $this->conn;
     }
 }
