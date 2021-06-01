@@ -46,7 +46,9 @@
         <input type="submit" value="Save">
     </form>
     <ul>
-        <li> <?php var_dump($todos); ?> </li>
+        <?php foreach ($todos as $value) : ?>
+        <li> <?php echo $value; ?> </li>
+        <?php endforeach; ?>
     </ul>
 <?php else: ?>
     <h1>Login</h1>
