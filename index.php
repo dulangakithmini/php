@@ -1,3 +1,8 @@
+<?php
+    $name = "Dula";
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,7 +13,8 @@
     <title>Learn Php</title>
 </head>
 <body>
-<h1>Hello</h1>
-
+<h1>Hello <?php echo $name;  ?></h1>
+<h1>Hello <?php echo $name. " K";  ?></h1>
+<h1>Hello <?php echo $name;  ?> K </h1>
 </body>
 </html>
