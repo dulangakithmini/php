@@ -20,4 +20,24 @@ class Post
     {
         $this->conn = $db;
     }
+
+    //Get Posts
+    public function read()
+    {
+        //Create query
+        $query = 'SELECT
+                    c.name as category_name,
+                    p.id,
+                    p.category_id,
+                    p.title,
+                    p.author,
+                    p.created_at
+                   FROM
+                    ' . $this->table . ' p
+                   LEFT JOIN
+                    categories c ON
+                    p.category_id = c.id
+                   ORDER BY
+                    p.created_at DESC';
+    }
 }
