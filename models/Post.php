@@ -14,4 +14,10 @@ class Post
     public $body;
     public $author;
     public $created_at;
+
+    //constructor with db
+    public function __construct($db)
+    {
+        $this->conn = $db;
+    }
 }
