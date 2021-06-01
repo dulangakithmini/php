@@ -39,5 +39,8 @@ if ($num > 0) {
 
         //Push to 'data'
         array_push($posts_arr['data'], $post_item);
+
+        //Turn to JSON and output
+        echo json_encode($posts_arr);
     }
 }
