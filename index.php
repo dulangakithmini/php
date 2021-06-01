@@ -7,7 +7,11 @@
     //Allows to drop any variable which has a type to it
     var_dump($savedTodos);
 
-    $todos = array();
+    if (isset($savedTodos)) {
+        $todos = $savedTodos;
+    } else {
+        $todos = array();
+    }
 
     if (isset($todo)) {
         array_push($todos, $todo);
