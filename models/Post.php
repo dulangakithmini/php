@@ -42,5 +42,8 @@ class Post
 
         //Prepared statements
         $stmt = $this->conn->prepare($query);
+
+        //Exwcute query
+        $stmt->execute();
     }
 }
