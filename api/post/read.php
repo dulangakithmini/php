@@ -16,3 +16,6 @@ $post = new Post($db);
 
 //Blog post query
 $result = $post->read();
+
+//Get Row count
+$num = $result->rowCount();
