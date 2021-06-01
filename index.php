@@ -16,5 +16,11 @@
 <h1>Hello <?php echo $name;  ?></h1>
 <h1>Hello <?php echo $name. " K";  ?></h1>
 <h1>Hello <?php echo $name;  ?> K </h1>
+
+
+<?php if (isset($name)) { ?>
+<h1><?php echo $name; ?></h1>
+<?php } ?>
+
 </body>
 </html>
