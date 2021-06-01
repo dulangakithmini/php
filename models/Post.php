@@ -39,5 +39,8 @@ class Post
                     p.category_id = c.id
                    ORDER BY
                     p.created_at DESC';
+
+        //Prepared statements
+        $stmt = $this->conn->prepare($query);
     }
 }
