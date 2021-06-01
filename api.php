@@ -7,6 +7,7 @@ if ($con) {
     $result = mysqli_query($con, $sql);
 
     if ($result) {
+        header("Content-type:JSON");
         $i = 0;
         while ($row = mysqli_fetch_assoc($result)) {
             $response[$i]['id'] = $row['id'];
@@ -21,4 +22,3 @@ if ($con) {
     echo "DB connection failed";
 }
 ?>
-
