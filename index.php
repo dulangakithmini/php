@@ -2,8 +2,10 @@
     $name = $_GET['name'];
     $todo = $_POST['todo'];
 
+    $savedTodos = $_POST['todos'];
+
     //Allows to drop any variable which has a type to it
-    var_dump($todo);
+    var_dump($savedTodos);
 
     $todos = array();
 
@@ -11,7 +13,6 @@
         array_push($todos, $todo);
     }
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -32,6 +33,10 @@
 <?php if (isset($name)) : ?>
     <h1><?php echo $name; ?></h1>
     <form method="post">
+        <?php foreach ($todos as $value) : ?>
+        <input type="hidden" name="todos[]" value="<?php echo $value ?>">
+        <?php endforeach; ?>
+
         <label for="todo">Enter todo</label>
         <input type="text" name="todo" id="todo">
         <input type="submit" value="Save">
