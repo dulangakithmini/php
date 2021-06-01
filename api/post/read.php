@@ -36,5 +36,8 @@ if ($num > 0) {
             'category_id' => $category_id,
             'category_name' => $category_name
         );
+
+        //Push to 'data'
+        array_push($posts_arr['data'], $post_item);
     }
 }
