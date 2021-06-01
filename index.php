@@ -4,6 +4,12 @@
 
     //Allows to drop any variable which has a type to it
     var_dump($todo);
+
+    $todos = array();
+
+    if (isset($todo)) {
+        array_push($todos, $todo);
+    }
 ?>
 
 
@@ -30,6 +36,9 @@
         <input type="text" name="todo" id="todo">
         <input type="submit" value="Save">
     </form>
+    <ul>
+        <li> <?php var_dump($todos); ?> </li>
+    </ul>
 <?php else: ?>
     <h1>Login</h1>
     <form method="get">
