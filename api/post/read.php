@@ -28,5 +28,13 @@ if ($num > 0) {
 
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
+
+        $post_item = array(
+            'id' => $id,
+            'title' => $title,
+            'body' => html_entity_decode($body),
+            'category_id' => $category_id,
+            'category_name' => $category_name
+        );
     }
 }
