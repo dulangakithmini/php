@@ -1,5 +1,5 @@
 <?php
-    $name = "Dula";
+    $name = null;
 ?>
 
 
@@ -19,7 +19,9 @@
 
 
 <?php if (isset($name)) : ?>
-<h1><?php echo $name; ?></h1>
+    <h1><?php echo $name; ?></h1>
+<?php else: ?>
+    <h1>Login</h1>
 <?php endif; ?>
 
 </body>
