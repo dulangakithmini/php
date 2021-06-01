@@ -13,3 +13,6 @@ $db = $database->connect();
 
 //Instantiate blog post object
 $post = new Post($db);
+
+//Blog post query
+$result = $post->read();
