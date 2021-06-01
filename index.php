@@ -1,5 +1,9 @@
 <?php
     $name = $_GET['name'];
+    $todo = $_POST['todo'];
+
+    //Allows to drop any variable which has a type to it
+    var_dump($todo);
 ?>
 
 
@@ -16,10 +20,16 @@
 <h1>Hello <?php echo $name;  ?></h1>
 <h1>Hello <?php echo $name. " K";  ?></h1>
 <h1>Hello <?php echo $name;  ?> K </h1>
+<h1> <?php echo 5*25;  ?> </h1>
 
 
 <?php if (isset($name)) : ?>
     <h1><?php echo $name; ?></h1>
+    <form method="post">
+        <label for="todo">Enter todo</label>
+        <input type="text" name="todo" id="todo">
+        <input type="submit" value="Save">
+    </form>
 <?php else: ?>
     <h1>Login</h1>
     <form method="get">
