@@ -1,5 +1,5 @@
 <?php
-    $name = null;
+    $name = $_GET['name'];
 ?>
 
 
@@ -22,6 +22,11 @@
     <h1><?php echo $name; ?></h1>
 <?php else: ?>
     <h1>Login</h1>
+    <form method="get">
+        <label for="name"> Name </label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Login">
+    </form>
 <?php endif; ?>
 
 </body>
