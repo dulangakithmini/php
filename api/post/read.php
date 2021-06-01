@@ -19,3 +19,14 @@ $result = $post->read();
 
 //Get Row count
 $num = $result->rowCount();
+
+//Check if there are any posts
+if ($num > 0) {
+    //Post array
+    $posts_arr = array();
+    $posts_arr['data'] = array();
+
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        extract($row);
+    }
+}
